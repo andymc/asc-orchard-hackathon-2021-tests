@@ -3,6 +3,7 @@ const { SPANISH_TO_ENGLISH, TRACK_LIST } = require('./constants.js')
 
 const newSingle = (single) => {
   // insert code
+  return `New single ${single} is dropping soon!`;
 };
 
 const eresBadBunny = (name) => {
