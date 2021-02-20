@@ -8,12 +8,15 @@ const newSingle = (single) => {
 
 const eresBadBunny = (name) => {
   // insert code
-  return (name === "Bad Bunny");
+  let upper = name.toUpperCase();
+  return (upper === "BAD BUNNY");
 };
 
 const areYouLil = (name) => {
-  // insert code
+  var prefix = name.substring(0, 3);
+  return (prefix == 'Lil');
 };
+
 
 const mostViewsThreeVideos = (videoOneViews, videoTwoViews, videoThreeViews) => {
   // insert code
