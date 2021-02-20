@@ -19,22 +19,20 @@ const areYouLil = (name) => {
 
 
 const mostViewsThreeVideos = (videoOneViews, videoTwoViews, videoThreeViews) => {
-  // insert code
-  var maxViews = 0;
+    // insert code
+    var maxViews = 0;
   
-  if(videoOneViews > videoTwoViews){
-    maxViews = videoOneViews;
-  } else {
-    maxViews = videoTwoViews;
-  }
-  
-  if(videoTwoViews > videoThreeViews){
-    maxViews = videoTwoViews;
-  } else {
-    maxViews = videoThreeViews;
-  }
-  
-  return maxViews;
+    if(videoOneViews > videoTwoViews){
+      maxViews = videoOneViews;
+    } else {
+      maxViews = videoTwoViews;
+    }
+    
+    if(videoThreeViews > maxViews){
+      maxViews = videoThreeViews;
+    }
+    
+    return maxViews;
 };
 
 const mostViews = (videoViews) => {
