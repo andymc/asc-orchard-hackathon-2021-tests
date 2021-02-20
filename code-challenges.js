@@ -48,10 +48,61 @@ const mostViews = (videoViews) => {
 
 const validateEmail = (email) => {
   // insert code
+  var hasSymbol = email.includes("@");
+  
+  var nameBeforeSymbol;
+  var symbolIndex = email.indexOf("@");
+  if(symbolIndex > 0){
+    nameBeforeSymbol = true;
+  } else {
+    nameBeforeSymbol = false;
+    return("Invalid email: missing recipient name")
+  }
+  
+  var hasGoodEnd;
+  if (email.substring(email.length - 4, email.length) == ".org" || ".com" || ".edu" || ".net"){
+    hasGoodEnd = true;
+  }
+  else{
+    hasGoodEnd = false;
+  }
+  
+  if(hasSymbol && hasGoodEnd && nameBeforeSymbol){
+    return 'Valid email';
+  }
+  return 'Invalid email';
 };
 
 const validateEmailWithMessage = (email) => {
   // insert code
+  var hasSymbol = email.includes("@");
+  if(hasSymbol == false){
+    return 'Invalid email missing @ symbol';
+  }
+  
+  var nameBeforeSymbol;
+  var symbolIndex = email.indexOf("@");
+  if(symbolIndex > 0){
+    nameBeforeSymbol = true;
+  } else {
+    nameBeforeSymbol = false;
+    return "Invalid email: missing recipient name"
+  }
+  
+  var hasGoodEnd;
+  if (email.substring(email.length - 4, email.length) == ".org" || ".com" || ".edu" || ".net"){
+    hasGoodEnd = true;
+  }
+  else{
+    hasGoodEnd = false;
+    return "Invalid email: email address should end with .com, .edu, .net, or .org"
+  }
+  
+  if(hasSymbol && hasGoodEnd && nameBeforeSymbol){
+    return 'Valid email';
+  }
+  return 'Invalid email';
+
 };
 
 const getInitials = (name) => {
