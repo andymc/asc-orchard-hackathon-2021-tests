@@ -37,6 +37,13 @@ const mostViewsThreeVideos = (videoOneViews, videoTwoViews, videoThreeViews) => 
 
 const mostViews = (videoViews) => {
   // insert code
+  var maximumViews = 0
+  for (i=0; i<videoViews.length; i++){
+    if (videoViews[i]> maximumViews){
+      maximumViews = videoViews[i]
+    }
+  }
+    return maximumViews;
 };
 
 const validateEmail = (email) => {
