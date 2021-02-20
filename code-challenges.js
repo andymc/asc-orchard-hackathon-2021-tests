@@ -8,6 +8,7 @@ const newSingle = (single) => {
 
 const eresBadBunny = (name) => {
   // insert code
+  return (name === "Bad Bunny");
 };
 
 const areYouLil = (name) => {
