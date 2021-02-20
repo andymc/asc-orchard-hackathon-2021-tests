@@ -155,6 +155,16 @@ const getInitialsLongName = (name) => {
 
 const howRepetitiveAreYou = (lyrics, word) => {
   // insert code
+  var counter = 0;
+  var wordArray = lyrics.split(" ");
+  
+  
+  for (var i = 0; i < wordArray.length; i++){
+    if (wordArray[i].includes(word)){
+      counter++;
+    }
+  }
+  return counter;
 };
 
 const translateThis = (titles) => {
