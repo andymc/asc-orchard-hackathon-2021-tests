@@ -107,6 +107,18 @@ const validateEmailWithMessage = (email) => {
 
 const getInitials = (name) => {
   // insert code
+  var initials = ""; 
+  if (name.indexOf(" ") == -1){
+    initials = name.substring(0,2);
+    return initials;
+  }
+  var splitString = name.split(" ");
+  for(var i = 0; i < splitString.length; i++){
+    var string = splitString[i];
+    initials+= string.charAt(0);
+    
+  }
+ return initials;
 };
 
 const getInitialsOneName = (name) => {
